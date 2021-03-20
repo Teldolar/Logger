@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loger", "Loger\Loger.csproj", "{1E19DDE4-1E89-4FB8-9CB6-DDCC6DC28389}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{1E19DDE4-1E89-4FB8-9CB6-DDCC6DC28389}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
