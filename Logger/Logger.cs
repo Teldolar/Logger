@@ -40,7 +40,7 @@ namespace Logger
 
         public void ErrorUnique(string message, Exception e)
         {
-            if (_uniqueError.IndexOf(message) == -1)
+            if (!_uniqueError.Contains(message))
             {
                 if (message == "")
                 {
@@ -74,7 +74,7 @@ namespace Logger
 
         public void WarningUnique(string message)
         {
-            if(_uniqueWarning.IndexOf(message)==-1)
+            if(!_uniqueWarning.Contains(message))
             {
                 _uniqueWarning.Add(message);
                 WriteTextIntoFile(message,"UniqueWarning","NewUniqueWarning");
