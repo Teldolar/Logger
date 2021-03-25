@@ -40,24 +40,31 @@ namespace Logger
 
         public void ErrorUnique(string message, Exception e)
         {
-            if (!_uniqueError.Contains(message))
+            if (message == "")
             {
-                if (message == "")
+                if (!_uniqueError.Contains(e.Message))
                 {
                     _uniqueError.Add(e.Message);
-                    WriteTextIntoFile(e, "UniqueError", "UniqueError"); 
-                }
-                else if (e.Message=="")
-                {
-                    _uniqueError.Add(message);
-                    WriteTextIntoFile(message, "UniqueError", "UniqueError"); 
-                }
-                else
-                {
-                    _uniqueError.Add(message);
-                    WriteTextIntoFile(message,e, "UniqueError", "UniqueError"); 
+                    WriteTextIntoFile(e, "UniqueError", "UniqueError");
                 }
             }
+            else if (e.Message=="")
+            {
+                if (!_uniqueError.Contains(message))
+                {
+                    _uniqueError.Add(message);
+                    WriteTextIntoFile(message, "UniqueError", "UniqueError");
+                }
+            }
+            else
+            {
+                if (!_uniqueError.Contains(e.Message)||!_uniqueError.Contains(message))
+                {
+                    _uniqueError.Add(message);
+                    WriteTextIntoFile(message, e, "UniqueError", "UniqueError");
+                }
+            }
+            
         }
 
         public void Warning(string message)
