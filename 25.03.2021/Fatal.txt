@@ -1,0 +1,8 @@
+17:48:10 | Fatal
+Message:
+Fatal error!
+--------------------
+18:18:12 | Fatal
+Message:
+Fatal
+--------------------
