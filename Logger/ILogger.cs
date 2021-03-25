@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Logger
 {
-    public interface IFatalLogger
+    public interface ILogger
     {
         /// <summary>
         /// Критичная ошибка:приложение не может далее функционировать
@@ -17,10 +17,7 @@ namespace Logger
         /// <param name="message">сообщение</param>
         /// <param name="e">Exception</param>
         void Fatal(string message, Exception e);
-    }
-    
-    public interface IErrorLogger
-    {
+        
         /// <summary>
         /// Ошибка в работе приложения: операция расчета завершается, но приложение продолжает работу
         /// </summary>
@@ -46,10 +43,7 @@ namespace Logger
         /// <param name="message"></param>
         /// <param name="e"></param>
         void ErrorUnique(string message, Exception e);
-    }
-    
-    public interface IWarningLogger
-    {
+        
         /// <summary>
         /// Предупреждение: на работу приложения не влияет, 
         /// но может сообщать о потенциальных проблемах в расчете
@@ -76,10 +70,7 @@ namespace Logger
         /// По прошествию дня уникальность возобновляется.
         /// </remarks>>
         void WarningUnique(string message);
-    }
-    
-    public interface IInfoLogger
-    {
+        
         /// <summary>
         /// Информирование: не влияет на работу приложения,
         /// является инструментом информирования
@@ -102,10 +93,7 @@ namespace Logger
         /// <param name="message">сообщение</param>
         /// <param name="args">аргументы</param>
         void Info(string message, params object[] args);
-    }
-    
-    public interface IDebugLogger
-    {
+        
         /// <summary>
         /// Дебагирование: инструмент для трассировки и отладки
         /// </summary>
@@ -125,10 +113,7 @@ namespace Logger
         /// <param name="message"></param>
         /// <param name="args">аргументы</param>
         void DebugFormat(string message, params object[] args);
-    }
-    
-    public interface ISystemInfoLogger
-    {
+        
         /// <summary>
         /// Запись системных логов информационного характера
         /// </summary>
