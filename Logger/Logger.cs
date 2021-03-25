@@ -121,7 +121,7 @@ namespace Logger
             var newMessage="";
             foreach (var (key, value) in properties)
             {
-                newMessage += $"{message} {key} {value}";
+                newMessage += $"{message} {key} {value}\n";
             }
             WriteTextIntoFile($"{newMessage}","SystemInfo","SystemInfo");
         }
