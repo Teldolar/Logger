@@ -1,0 +1,8 @@
+17:48:10 | SystemInfo
+Message:
+SystemInfo 1 100SystemInfo 2 200SystemInfo 3 300
+--------------------
+18:18:12 | SystemInfo
+Message:
+SystemInfo 1 первое значениеSystemInfo 2 второе значение
+--------------------

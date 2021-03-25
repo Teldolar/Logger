@@ -1,0 +1,8 @@
+17:48:10 | UniqueError
+Exception:
+Index was outside the bounds of the array.
+--------------------
+18:18:12 | UniqueError
+Exception:
+тут что-то есть
+--------------------
